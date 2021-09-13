@@ -16,7 +16,7 @@ describe("Test suite Cartas obtener usuarios", () => {
   // 'wrapper' was assigned the 'App' component, so here the
   // 'toMatchSnapshot' method is used to make sure its content matches
   // the content of its snapshot (App.test.js.snap)
-  test("debe coincidir con snapshot", () => {
+  test("App debe coincidir con snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
