@@ -27,4 +27,13 @@ describe("Test suite Cartas obtener usuarios", () => {
   test("el título debe ser 'Listado de Usuarios'", () => {
     expect(wrapper.find("h2").text()).toEqual("Listado de Usuarios");
   });
+
+  // Test Case 'c':
+  // this will search for an element inside the component
+  // which must match the specified HTML element
+  test("debe existir un loader con texto 'cargando página...'", () => {
+    expect(wrapper.containsMatchingElement(<p>Cargando página...</p>)).toBe(
+      true
+    );
+  });
 });
