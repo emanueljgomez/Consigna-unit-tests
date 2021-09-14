@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import App from "../App.js";
+import Perfil from "../Perfil.js";
 
 describe("Test suite Cartas obtener usuarios", () => {
   let wrapper;
@@ -35,5 +36,25 @@ describe("Test suite Cartas obtener usuarios", () => {
     expect(wrapper.containsMatchingElement(<p>Cargando página...</p>)).toBe(
       true
     );
+  });
+});
+
+// A new Test suite is created. It will contain Test cases for the 'Perfil' component
+
+describe("Test suite Componente Perfil", () => {
+  const usuario = {
+    nombre: "Juan Carlo",
+    email: "juancarlo@comoestas",
+    telefono: "123",
+    codigoPostal: "7600",
+  };
+
+  // Test Case 'd':
+  // a previously created fake user is provided
+  // in order to check the component structure
+  test("Perfil debe coincidir con snapshot", () => {
+    const wrapper = shallow(<Perfil usuario={usuario} />);
+
+    expect(wrapper).toMatchSnapshot();
   });
 });
