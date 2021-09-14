@@ -37,6 +37,14 @@ describe("Test suite Cartas obtener usuarios", () => {
       true
     );
   });
+
+  // Test Case 'h':
+  // initial state properties of the wrapped
+  // component can be accesed directly
+  // in order to evaluate them
+  test('el color de fondo debe ser inicialmente "#ccffff"', () => {
+    expect(wrapper.state("color")).toEqual("#ccffff");
+  });
 });
 
 // A new Test suite is created. It will contain Test cases for the 'Perfil' component
@@ -91,8 +99,8 @@ describe("Test suite Componente Perfil", () => {
   });
 
   // Test Case 'g':
-  // hasClass can detect a single-node wrapper
-  // with the passed in class name
+  // 'hasClass' from Enzyme can detect a
+  // single-node wrapper with the passed in class name
   test("el elemento div dentro de cada carta debe tener una clase 'celda'", () => {
     expect(wrapper.find("div").hasClass("celda")).toBe(true);
   });
