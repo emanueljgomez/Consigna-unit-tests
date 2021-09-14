@@ -89,4 +89,11 @@ describe("Test suite Componente Perfil", () => {
     }
     expect(counter == 4).toBe(true);
   });
+
+  // Test Case 'g':
+  // hasClass can detect a single-node wrapper
+  // with the passed in class name
+  test("el elemento div dentro de cada carta debe tener una clase 'celda'", () => {
+    expect(wrapper.find("div").hasClass("celda")).toBe(true);
+  });
 });
