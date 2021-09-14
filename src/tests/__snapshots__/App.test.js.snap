@@ -171,14 +171,14 @@ ShallowWrapper {
 }
 `;
 
-exports[`Test suite Componente Perfil will check the matchers and pass 1`] = `
+exports[`Test suite Componente Perfil Perfil debe coincidir con snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Perfil
     usuario={
       Object {
         "codigoPostal": "7600",
-        "email": "juancarlo@comoestas",
+        "email": "unit-test@mock.org.us",
         "nombre": "Juan Carlo",
         "telefono": "123",
       }
@@ -222,7 +222,7 @@ ShallowWrapper {
             className="email"
           >
              
-            juancarlo@comoestas
+            unit-test@mock.org.us
           </span>
         </p>,
         <p>
@@ -325,7 +325,7 @@ ShallowWrapper {
               className="email"
             >
                
-              juancarlo@comoestas
+              unit-test@mock.org.us
             </span>,
           ],
         },
@@ -350,14 +350,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 " ",
-                "juancarlo@comoestas",
+                "unit-test@mock.org.us",
               ],
               "className": "email",
             },
             "ref": null,
             "rendered": Array [
               " ",
-              "juancarlo@comoestas",
+              "unit-test@mock.org.us",
             ],
             "type": "span",
           },
@@ -505,7 +505,7 @@ ShallowWrapper {
               className="email"
             >
                
-              juancarlo@comoestas
+              unit-test@mock.org.us
             </span>
           </p>,
           <p>
@@ -608,7 +608,7 @@ ShallowWrapper {
                 className="email"
               >
                  
-                juancarlo@comoestas
+                unit-test@mock.org.us
               </span>,
             ],
           },
@@ -633,14 +633,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   " ",
-                  "juancarlo@comoestas",
+                  "unit-test@mock.org.us",
                 ],
                 "className": "email",
               },
               "ref": null,
               "rendered": Array [
                 " ",
-                "juancarlo@comoestas",
+                "unit-test@mock.org.us",
               ],
               "type": "span",
             },

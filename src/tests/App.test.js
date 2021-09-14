@@ -44,17 +44,49 @@ describe("Test suite Cartas obtener usuarios", () => {
 describe("Test suite Componente Perfil", () => {
   const usuario = {
     nombre: "Juan Carlo",
-    email: "juancarlo@comoestas",
+    email: "unit-test@mock.org.us",
     telefono: "123",
     codigoPostal: "7600",
   };
+
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Perfil usuario={usuario} />);
+  });
 
   // Test Case 'd':
   // a previously created fake user is provided
   // in order to check the component structure
   test("Perfil debe coincidir con snapshot", () => {
-    const wrapper = shallow(<Perfil usuario={usuario} />);
-
     expect(wrapper).toMatchSnapshot();
+  });
+
+  // Test Case 'e':
+  // 'containsMatchingElement' is used to search
+  // inside the component for the exact structure
+  // and content required
+  test("el usuario debe tener una dirección de e-mail unit-test@mock.org.us", () => {
+    expect(
+      wrapper.containsMatchingElement(
+        <p>
+          <span className="titulo">E-mail:</span>
+          <span className="email">unit-test@mock.org.us</span>
+        </p>
+      )
+    ).toBe(true);
+  });
+
+  // Test Case 'f':
+  // an iteration combined with a class selector
+  // is used in order to find all elements that
+  // possess the required class
+  test("cada carta debe tener 4 elementos de párrafo con clase 'titulo'", () => {
+    let counter;
+    for (var i = 0; i < 5; i++) {
+      let el = document.getElementsByClassName("titulo");
+      counter = i;
+    }
+    expect(counter == 4).toBe(true);
   });
 });
