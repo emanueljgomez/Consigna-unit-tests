@@ -40,10 +40,19 @@ describe("Test suite Cartas obtener usuarios", () => {
 
   // Test Case 'h':
   // initial state properties of the wrapped
-  // component can be accesed directly
+  // component can be accessed directly
   // in order to evaluate them
   test('el color de fondo debe ser inicialmente "#ccffff"', () => {
     expect(wrapper.state("color")).toEqual("#ccffff");
+  });
+
+  // Test Case 'i':
+  // you can use Class Names in combination
+  // with the 'wrapper.find' method in order
+  // to evaluate specific elements of the DOM
+  test('el color de fondo debe ser "#ffff99" al hacer click en el div contenedor', () => {
+    wrapper.find(".container").simulate("click");
+    expect(wrapper.state("color")).toEqual("#ffff99");
   });
 });
 
