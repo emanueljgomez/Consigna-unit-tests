@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:cobertura": "npm test -- --coverage"
+    "test:cobertura": "npm test -- --coverage",
+    "test:cobertura:exportar": "npm test -- --coverage --coverageDirectory=reporte_cobertura"
   },
   "setupFiles": [
     "./src/setupTests.js"
