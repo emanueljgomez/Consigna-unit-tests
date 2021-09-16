@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:cobertura": "npm test -- --coverage",
-    "test:cobertura:exportar": "npm test -- --coverage --coverageDirectory=reporte_cobertura"
+    "test:cobertura:exportar": "npm test -- --coverage --json --outputFile=reporte_cobertura.json"
   },
   "setupFiles": [
     "./src/setupTests.js"
