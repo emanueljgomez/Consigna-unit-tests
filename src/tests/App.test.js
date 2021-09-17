@@ -95,16 +95,12 @@ describe("Test suite Componente Perfil", () => {
   });
 
   // Test Case 'f':
-  // an iteration combined with a class selector
-  // is used in order to find all elements that
-  // possess the required class
+  // 'find' method is used twice as a concatenation
+  // in order to find the required HTML elements and their classes,
+  // then the total amount of found matching elements is compared to
+  // the desired amount of elements
   test("cada carta debe tener 4 elementos de párrafo con clase 'titulo'", () => {
-    let counter;
-    for (var i = 0; i < 5; i++) {
-      let el = document.getElementsByClassName("titulo");
-      counter = i;
-    }
-    expect(counter == 4).toBe(true);
+    expect(wrapper.find("p").find(".titulo").length).toEqual(4);
   });
 
   // Test Case 'g':
